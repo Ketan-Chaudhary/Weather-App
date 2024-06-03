@@ -46,9 +46,9 @@ const Weather = () => {
             <FaSearch size={22} />
           </button>
         </div>
+      </div>
         <SectionUpper placeData={placeData } currenTime={currenTime} />
         <SectionLower placeData={placeData}/>
-      </div>
     </section>
   );
 };
