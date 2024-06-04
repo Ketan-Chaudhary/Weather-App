@@ -4,7 +4,9 @@ import { FaSearch } from "react-icons/fa";
 
 import SectionUpper from "../Section-Upper/SectionUpper";
 import SectionLower from "../Section-Lower/SectionLower";
-let WEATHER_API_KEY = "0b2c554bf6ae854fe89082ed78da00c5";
+// let WEATHER_API_KEY = "0b2c554bf6ae854fe89082ed78da00c5";
+const WEATHER_API_KEY = import.meta.env.REACT_APP_WEATHER_API_KEY;
+
 
 const Weather = () => {
   const [place, setPlace] = useState("Jabalpur");
@@ -14,6 +16,7 @@ const Weather = () => {
     minute: "2-digit",
     // hour12: true
   });
+
   const getWeatherData = async () => {
     // https://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}
 
@@ -47,8 +50,12 @@ const Weather = () => {
           </button>
         </div>
       </div>
-        <SectionUpper placeData={placeData } currenTime={currenTime} />
-        <SectionLower placeData={placeData}/>
+      <div>
+        <SectionUpper placeData={placeData} currenTime={currenTime} />
+      </div>
+      <div>
+        <SectionLower placeData={placeData} />
+      </div>
     </section>
   );
 };

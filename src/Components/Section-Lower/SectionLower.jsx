@@ -1,54 +1,58 @@
-import React from 'react'
-
-
-const SectionLower = ({placeData}) => {
+import React from "react";
+import "./SectionLower.css";
+const SectionLower = ({ placeData }) => {
   return (
-    <section>
-        {placeData && (
-          <div className="section2">
-            <div className="section21">
-              <p className="head1">Temperature</p>
-              <p className="head2">
-                {(placeData?.main.temp - 273.15).toFixed(1)} deg Celcius
-              </p>
-            </div>
-
-            <div className="section21">
-              <p className="head1">Temperature Min</p>
-              <p className="head2">
-                {(placeData?.main.temp_min - 273.15).toFixed(1)} °C
-              </p>
-            </div>
-
-            <div className="section21">
-              <p className="head1">Temperature Max</p>
-              <p className="head2">
-                {(placeData?.main.temp_max - 273.15).toFixed(1)} °C
-              </p>
-            </div>
-
-            <div className="section21">
-              <p className="head1">Humidity</p>
-              <p className="head2">{placeData?.main.humidity}</p>
-            </div>
-
-            <div className="section21">
-              <p className="head1">pressure</p>
-              <p className="head2">{placeData?.main.pressure}</p>
-            </div>
-
-            <div className="section21">
-              <p className="head1">Visibility</p>
-              <p className="head2">{placeData?.visibility}</p>
-            </div>
-            <div className="section21">
-              <p className="head1">Wind Speed</p>
-              <p className="head2">{placeData?.wind.speed} km/hr</p>
-            </div>
+    <section className="lowerSection">
+      {placeData && (
+        <div className="lowerContainer">
+          <div className="sectionDetail">
+            <p className="detailHeading">Temperature</p>
+            <p className="detailValue">
+              {(placeData?.main.temp - 273.15).toFixed(1)} °C
+            </p>
           </div>
-        )}
-    </section>
-  )
-}
 
-export default SectionLower
+          <div className="sectionDetail">
+            <p className="detailHeading">Temperature Min</p>
+            <p className="detailValue">
+              {(placeData?.main.temp_min - 273.15).toFixed(1)} °C
+            </p>
+          </div>
+
+          <div className="sectionDetail">
+            <p className="detailHeading">Temperature Max</p>
+            <p className="detailValue">
+              {(placeData?.main.temp_max - 273.15).toFixed(1)} °C
+            </p>
+          </div>
+
+          <div className="sectionDetail">
+            <p className="detailHeading">Humidity</p>
+            <p className="detailValue">{placeData?.main.humidity}</p>
+          </div>
+        </div>
+      )}
+      {placeData && <div className="lowerContainer2">
+      <div className="sectionDetail">
+            <p className="detailHeading">pressure</p>
+            <p className="detailValue">{placeData?.main.pressure}</p>
+          </div>
+
+          <div className="sectionDetail">
+            <p className="detailHeading">Visibility</p>
+            <p className="detailValue">{placeData?.visibility}</p>
+          </div>
+          <div className="sectionDetail">
+            <p className="detailHeading">Wind Speed</p>
+            <p className="detailValue">{placeData?.wind.speed} km/hr</p>
+          </div>
+          <div className="sectionDetail">
+            <p className="detailHeading">description</p>
+            <p className="detailValue">{placeData?.weather[0].description}</p>
+          </div>
+      </div> }
+    </section>
+  );
+};
+
+export default SectionLower;
