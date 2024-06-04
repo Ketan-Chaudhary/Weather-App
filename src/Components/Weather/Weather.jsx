@@ -9,7 +9,7 @@ const WEATHER_API_KEY = import.meta.env.REACT_APP_WEATHER_API_KEY;
 
 
 const Weather = () => {
-  const [place, setPlace] = useState("Jabalpur");
+  const [place, setPlace] = useState(null);
   const [placeData, setPlaceData] = useState(null);
   const currenTime = new Date().toLocaleTimeString([], {
     hour: "2-digit",
