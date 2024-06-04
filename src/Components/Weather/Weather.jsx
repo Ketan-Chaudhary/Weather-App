@@ -36,6 +36,12 @@ const Weather = () => {
   useEffect(() => {
     getWeatherData();
   }, []);
+
+  const handleKeypress = e => {
+  if (e.key === "Enter") {
+    getWeatherData();
+  }
+};
   return (
     <section className="w-wrapper">
       <div className="w-container">
@@ -44,6 +50,7 @@ const Weather = () => {
             type="search"
             placeholder="Enter the city Name"
             autoComplete="off"
+            onKeyDown={handleKeypress}
             onChange={(e) => setPlace(e.target.value)}
           />
           <button onClick={getWeatherData}>
