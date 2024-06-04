@@ -43,6 +43,7 @@ const Weather = () => {
           <input
             type="search"
             placeholder="Enter the city Name"
+            autoComplete="off"
             onChange={(e) => setPlace(e.target.value)}
           />
           <button onClick={getWeatherData}>
