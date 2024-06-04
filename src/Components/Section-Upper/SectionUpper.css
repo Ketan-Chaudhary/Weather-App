@@ -22,7 +22,8 @@
     flex-direction: column;
     gap: 2rem;
     background-color: rgba(0, 0, 0, 0.406);
-    width: 20rem;
+    width: 30rem;
+    border-radius: 3rem;
 
 }
 

@@ -34,7 +34,10 @@
     font-weight: 700;
     width: 80%;
 }
-
+::placeholder {
+    color: rgba(255, 255, 255, 0.745);
+    
+  }
 .search>button{
     background-color: transparent;
     color: white;
