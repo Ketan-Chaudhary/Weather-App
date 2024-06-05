@@ -51,3 +51,27 @@
     font-size: 25px;
   color: rgb(240, 255, 141);
 }
+
+@media (max-Width:740px) {
+  .lowerSection{
+    height: 40vh;
+    overflow-y: scroll;
+    flex-direction: column;
+    /* justify-content: center; */
+    line-height: 1rem;
+    justify-content: stretch;
+   
+  }
+
+   .lowerContainer{
+    margin-top: 2rem;
+   }
+  .lowerContainer , .lowerContainer2{
+    width: 90%;
+    /* text-align: center; */
+  }
+
+  .sectionDetail{
+    width: 100%;
+  }
+}

@@ -64,3 +64,25 @@
     color: rgb(151, 137, 137);
 
 }
+
+@media (max-Width:740px) {
+    .upper-row{
+        gap: 0.8rem;
+    }
+
+    .section-upper{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    .upper-container{
+        width: 70%;
+    }
+
+    @media (max-Height:375px) {
+        .section-upper{
+            margin-top: 2rem;
+        }
+    }
+}
