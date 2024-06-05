@@ -80,9 +80,4 @@
         width: 70%;
     }
 
-    @media (max-Height:375px) {
-        .section-upper{
-            margin-top: 2rem;
-        }
-    }
-}
+   }
